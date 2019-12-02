@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">e-tiket</string>
+    <string name="textView_usuario">Usuario</string>
+    <string name="textView_contraseña">Contraseña</string>
+    <string name="button_iniciar">Iniciar</string>
+    <string name="button_registrar">Registrar</string>
+    <string name="textView_noTiket">No. Ticket</string>
+    <string name="textView_idCliente">Id Cliente</string>
+    <string name="textView_fecha">Fecha</string>
+    <string name="textView_hora">Hora</string>
+    <string name="textView_total">Total</string>
+    <string name="Activity_2">E-Ticket</string>
+    <string name="textView_idArticulo">Id Articulo</string>
+    <string name="textView_NombreArticulo">Nombre</string>
+    <string name="textView_CantidadArticulo">Cantidad</string>
+    <string name="textView_precioIndividual">$ individual</string>
+    <string name="textView_totalArticulo">Total</string>
+
+</resources>
