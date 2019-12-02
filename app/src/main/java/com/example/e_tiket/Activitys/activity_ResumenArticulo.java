@@ -1,4 +1,4 @@
-package com.example.e_tiket;
+package com.example.e_tiket.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.e_tiket.Adaptadores.AdapterResumenArticulo;
-import com.example.e_tiket.Models.Producto;
 import com.example.e_tiket.Models.ResumenArticulo;
 import com.example.e_tiket.Models.Ticket;
+import com.example.e_tiket.R;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -28,26 +28,13 @@ public class activity_ResumenArticulo extends AppCompatActivity {
         Serializable resumenArticulo = intent.getSerializableExtra("resumenArticulo");
         Ticket ticket = (Ticket) resumenArticulo;
 
-
         recyclerView_resumen = (RecyclerView) findViewById(R.id.reciclerview_resumenArticulo);
         recyclerView_resumen.setLayoutManager(new LinearLayoutManager(activity_ResumenArticulo.this, RecyclerView.VERTICAL,false));
 
-          //  resumenArticulos = new ArrayList<ResumenArticulo>();
         ArrayList<ResumenArticulo> resumenArticulos = (ArrayList<ResumenArticulo>) ((Ticket) resumenArticulo).getListProductosComprados();
-
-        //Producto producto = new Producto(1,"papas",54.3);
-        //ResumenArticulo res = new ResumenArticulo(producto,1,2);
-        //resumenArticulos.add(res);
-
         AdapterResumenArticulo adapterResumenArticulo = new AdapterResumenArticulo(resumenArticulos);
 
         recyclerView_resumen.setAdapter(adapterResumenArticulo);
-
-
-
-
-
-
 
     }
 }

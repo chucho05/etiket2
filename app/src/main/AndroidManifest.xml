@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_ResumenArticulo"></activity>
-        <activity android:name=".e_Tiket_Activity2" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activitys.activity_ResumenArticulo"></activity>
+        <activity android:name=".Activitys.e_Tiket_Activity2" />
+        <activity android:name=".Activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

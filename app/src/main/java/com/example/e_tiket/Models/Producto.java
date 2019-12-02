@@ -2,7 +2,9 @@ package com.example.e_tiket.Models;
 
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 
-public class Producto {
+import java.io.Serializable;
+
+public class Producto implements Serializable {
     private int idProducto;
     private String nombreProducto;
     private Double precioProducto;
