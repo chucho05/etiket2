@@ -8,12 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.e_tiket.Adaptadores.AdapterResumenArticulo;
-import com.example.e_tiket.Models.ResumenArticulo;
-import com.example.e_tiket.Models.Ticket;
+
 import com.example.e_tiket.R;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import models.ResumenArticulo;
+import models.Ticket;
 
 public class activity_ResumenArticulo extends AppCompatActivity {
 

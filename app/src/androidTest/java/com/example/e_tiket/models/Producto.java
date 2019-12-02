@@ -1,18 +1,18 @@
-package com.example.e_tiket.Models;
+package com.example.e_tiket.models;
 
-import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 
 import java.io.Serializable;
 
 public class Producto implements Serializable {
+
     private int idProducto;
     private String nombreProducto;
-    private Double precioProducto;
+    private float precio;
 
-    public Producto(int idProducto, String nombreProducto, Double precioProducto) {
+    public Producto(int idProducto, String nombreProducto, float precio) {
         this.idProducto = idProducto;
         this.nombreProducto = nombreProducto;
-        this.precioProducto = precioProducto;
+        this.precio = precio;
     }
 
     public int getIdProducto() {
@@ -31,11 +31,11 @@ public class Producto implements Serializable {
         this.nombreProducto = nombreProducto;
     }
 
-    public Double getPrecioProducto() {
-        return precioProducto;
+    public float getPrecio() {
+        return precio;
     }
 
-    public void setPrecioProducto(Double precioProducto) {
-        this.precioProducto = precioProducto;
+    public void setPrecio(float precio) {
+        this.precio = precio;
     }
 }

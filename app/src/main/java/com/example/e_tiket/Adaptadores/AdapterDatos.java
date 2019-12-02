@@ -9,10 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.e_tiket.Models.Ticket;
 import com.example.e_tiket.R;
 
 import java.util.ArrayList;
+
+import models.Ticket;
 
 public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDatos> implements View.OnClickListener {
 
@@ -38,10 +39,10 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
         Ticket ticket = arrayList_datos.get(position);
         //holder.asignarDatos(ticket);
 
-        holder.noTicket.setText(String.valueOf(ticket.getIdTiket()));
+        holder.noTicket.setText(String.valueOf(ticket.getIdTicket()));
         holder.idCliente.setText(String.valueOf(ticket.getIdCliente()));
-        holder.fecha.setText(ticket.getFecha());
-        holder.hora.setText(ticket.getHora());
+        holder.fecha.setText(ticket.getFecha().toString());
+        holder.hora.setText(ticket.getHora().toString());
         holder.total.setText(String.valueOf(ticket.getTotalTicket()));
 
     }

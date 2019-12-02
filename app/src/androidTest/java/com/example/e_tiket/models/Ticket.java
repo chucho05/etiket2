@@ -1,24 +1,21 @@
-package com.example.e_tiket.Models;
-
-import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+package com.example.e_tiket.models;
 
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
 import java.util.ArrayList;
 
-
 public class Ticket implements Serializable {
 
-    private int idTiket;
+    private int idTicket;
     private int idCliente;
-    private String fecha;
-    private String hora;
-    private double totalTicket;
-    ArrayList<ResumenArticulo> listProductosComprados;
+    private Date fecha;
+    private Time hora;
+    private float totalTicket;
+    private ArrayList<ResumenArticulo> listProductosComprados;
 
-    public Ticket(int idTiket, int idCliente, String fecha, String hora, double totalTicket, ArrayList<ResumenArticulo> listProductosComprados) {
-        this.idTiket = idTiket;
+    public Ticket(int idTicket, int idCliente, Date fecha, Time hora, float totalTicket, ArrayList<ResumenArticulo> listProductosComprados) {
+        this.idTicket = idTicket;
         this.idCliente = idCliente;
         this.fecha = fecha;
         this.hora = hora;
@@ -26,12 +23,12 @@ public class Ticket implements Serializable {
         this.listProductosComprados = listProductosComprados;
     }
 
-    public int getIdTiket() {
-        return idTiket;
+    public int getIdTicket() {
+        return idTicket;
     }
 
-    public void setIdTiket(int idTiket) {
-        this.idTiket = idTiket;
+    public void setIdTicket(int idTicket) {
+        this.idTicket = idTicket;
     }
 
     public int getIdCliente() {
@@ -42,27 +39,27 @@ public class Ticket implements Serializable {
         this.idCliente = idCliente;
     }
 
-    public String getFecha() {
-        return fecha.toString();
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public String getHora() {
-        return hora.toString();
+    public Time getHora() {
+        return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(Time hora) {
         this.hora = hora;
     }
 
-    public double getTotalTicket() {
+    public float getTotalTicket() {
         return totalTicket;
     }
 
-    public void setTotalTicket(double totalTicket) {
+    public void setTotalTicket(float totalTicket) {
         this.totalTicket = totalTicket;
     }
 

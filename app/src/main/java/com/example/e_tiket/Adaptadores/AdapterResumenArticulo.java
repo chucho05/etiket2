@@ -8,11 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.e_tiket.Models.ResumenArticulo;
 import com.example.e_tiket.R;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
+
+import models.ResumenArticulo;
 
 public class AdapterResumenArticulo extends RecyclerView.Adapter<AdapterResumenArticulo.ViewHolderDatos> {
 
@@ -33,9 +33,9 @@ public class AdapterResumenArticulo extends RecyclerView.Adapter<AdapterResumenA
     public void onBindViewHolder(@NonNull AdapterResumenArticulo.ViewHolderDatos holder, int position) {
         ResumenArticulo resumenArticulo = arrayList_resumenArticulo.get(position);
 
-        holder.textView_idArticulo.setText(String.valueOf(resumenArticulo.getIdArticulo()));
+        holder.textView_idArticulo.setText(String.valueOf(resumenArticulo.getIDArticulo()));
         holder.textView_nombre.setText(resumenArticulo.getNombreProducto());
-        holder.textView_cantidad.setText(String.valueOf(resumenArticulo.getCantidadProductos()));
+        holder.textView_cantidad.setText(String.valueOf(resumenArticulo.getCantidad()));
         holder.textView_$individual.setText(String.valueOf(resumenArticulo.getPrecioIndividualProducto()));
         holder.textView_total.setText(String.valueOf(resumenArticulo.getTotalProducto()));
     }
