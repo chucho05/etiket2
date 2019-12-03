@@ -27,7 +27,9 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
     @NonNull
     @Override
     public ViewHolderDatos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler,null,false);
+
+        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler,parent,false);
 
         view.setOnClickListener(this);
 

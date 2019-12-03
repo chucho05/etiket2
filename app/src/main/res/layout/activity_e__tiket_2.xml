@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activitys.e_Tiket_Activity2"
     >
 
@@ -12,10 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_naranja"
-            android:minHeight="?attr/actionBarSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:minHeight="?attr/actionBarSize">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -33,48 +31,48 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+            android:weightSum="5"
+            >
 
                 <TextView
                     android:id="@+id/textView_noTiket_l"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:text="@string/textView_noTiket" />
 
                 <TextView
                     android:id="@+id/textView_idCliente_l"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:text="@string/textView_idCliente" />
 
                 <TextView
                     android:id="@+id/textView_fecha_l"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:text="@string/textView_fecha" />
 
                 <TextView
                     android:id="@+id/textView_hora_l"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:text="@string/textView_hora" />
 
                 <TextView
                     android:id="@+id/textView_total_l"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:text="@string/textView_total" />
         </LinearLayout>
 
@@ -83,12 +81,11 @@
             android:id="@+id/reciclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginTop="16dp"
 
+            android:clipChildren="true"
             />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 
