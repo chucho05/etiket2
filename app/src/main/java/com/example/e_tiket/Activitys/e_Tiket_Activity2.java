@@ -92,7 +92,7 @@ public class e_Tiket_Activity2 extends AppCompatActivity implements PutList {
                            Ticket t1 = arrayList_listaTickets.get(recyclerView_tikets.getChildAdapterPosition(v));
                            Toast.makeText(getApplicationContext(),t1.getIdTicket()+"",Toast.LENGTH_SHORT).show();
 
-                           intent.putExtra("resumenArticulo",t1);
+                           intent.putExtra("ticket_seleccion",t1);
                            startActivity(intent);
                        }
                    }
