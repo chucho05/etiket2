@@ -26,12 +26,13 @@ public class activity_ResumenArticulo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__resumen_articulo);
 
+        recyclerView_resumen = (RecyclerView) findViewById(R.id.reciclerview_resumenArticulo);
+        recyclerView_resumen.setLayoutManager(new LinearLayoutManager(activity_ResumenArticulo.this, RecyclerView.VERTICAL,false));
+
         Intent intent = getIntent();
         Serializable resumenArticulo = intent.getSerializableExtra("ticket_seleccion");
         Ticket ticket = (Ticket) resumenArticulo;
 
-        recyclerView_resumen = (RecyclerView) findViewById(R.id.reciclerview_resumenArticulo);
-        recyclerView_resumen.setLayoutManager(new LinearLayoutManager(activity_ResumenArticulo.this, RecyclerView.VERTICAL,false));
 
         ArrayList<ResumenArticulo> resumenArticulos = ticket.getListProductosComprados();
         AdapterResumenArticulo adapterResumenArticulo = new AdapterResumenArticulo(resumenArticulos);

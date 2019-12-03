@@ -31,6 +31,7 @@ public class e_Tiket_Activity2 extends AppCompatActivity implements PutList {
     ArrayList<Ticket> arrayList_listaTickets;     //el adaptador lo recibe de parametro para distribuir la informacion en cada textview
     ArrayList<ResumenArticulo> arrayList_resumenArticulo;       //el ticket recibe como parametro un arraylist de tipo resumenarticulo
     TextView txtTitulo;
+    AdapterDatos adapter;
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +79,8 @@ public class e_Tiket_Activity2 extends AppCompatActivity implements PutList {
     @Override
     public void setAdapter(ArrayList<Ticket> lista) {
 
-        final AdapterDatos adapter = new AdapterDatos(lista);
+        this.arrayList_listaTickets = lista;
+        this.adapter = new AdapterDatos(lista);
 
         runOnUiThread(new Runnable() {
             @Override
