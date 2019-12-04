@@ -25,7 +25,7 @@ public class AdapterResumenArticulo extends RecyclerView.Adapter<AdapterResumenA
     @NonNull
     @Override
     public ViewHolderDatos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_resumen,parent,false);
         return new ViewHolderDatos(view);
     }
 
@@ -58,11 +58,11 @@ public class AdapterResumenArticulo extends RecyclerView.Adapter<AdapterResumenA
 
         public ViewHolderDatos(@NonNull View itemView) {
             super(itemView);
-            textView_idArticulo = (TextView) itemView.findViewById(R.id.textView_noTiket);
-            textView_nombre = (TextView) itemView.findViewById(R.id.textView_idCliente);
-            textView_cantidad = (TextView) itemView.findViewById(R.id.textView_fecha);
-            textView_$individual = (TextView) itemView.findViewById(R.id.textView_hora);
-            textView_total = (TextView) itemView.findViewById(R.id.textView_total);
+            textView_idArticulo = (TextView) itemView.findViewById(R.id.id_articulo);
+            textView_nombre = (TextView) itemView.findViewById(R.id.nombre_articulo);
+            textView_cantidad = (TextView) itemView.findViewById(R.id.cantidad);
+            textView_$individual = (TextView) itemView.findViewById(R.id.precion_individual);
+            textView_total = (TextView) itemView.findViewById(R.id.total);
 
 
         }

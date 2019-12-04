@@ -18,8 +18,8 @@ public class ConexionCliente   {
                 public void run() {
                     Socket socket = null;
                     try {
-                       /// socket = new Socket("192.168.43.177",1399);
-                        socket = new Socket("192.168.0.100",1399);
+                        socket = new Socket("192.168.43.177",1399);
+                       // socket = new Socket("192.168.0.100",1399);
                         DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
                         dataOutputStream.writeUTF(user_id+";user_id");
                         dataOutputStream.close();

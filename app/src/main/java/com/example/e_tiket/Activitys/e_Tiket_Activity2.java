@@ -41,6 +41,8 @@ public class e_Tiket_Activity2 extends AppCompatActivity implements PutList {
         //ConexionServidor conexionServidor = new ConexionServidor(e_Tiket_Activity2.this);
         this.txtTitulo = findViewById(R.id.titulo_activity2);
 
+        Toast.makeText(getApplicationContext(),"gracias por no contaminar",Toast.LENGTH_LONG).show();
+
             String user_id = getIntent().getStringExtra("user_id");
             //manda el id al Servidor
             ConexionCliente conexionCliente = new ConexionCliente(user_id,this);
